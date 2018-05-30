@@ -1,7 +1,7 @@
 // Files to cache
 var cacheName = 'Adi-app-v1';
 var appShellFiles = [
-  '/Adi-app/index.html',
+  '/test/index.html',
   
 ];
 
