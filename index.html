@@ -160,6 +160,19 @@
 	<!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> -->
 
 	<script>
+		// Initialize the default app
+	var defaultApp = admin.initializeApp(defaultAppConfig);
+
+	console.log(defaultApp.name);  // "[DEFAULT]"
+
+	// Retrieve services via the defaultApp variable...
+	var defaultAuth = defaultApp.auth();
+	var defaultDatabase = defaultApp.database();
+
+	// ... or use the equivalent shorthand notation
+	defaultAuth = admin.auth();
+	defaultDatabase = admin.database();
+		
 	  // Retrieve Firebase Messaging object.
 	const messaging = firebase.messaging();
 	// Add the public key generated from the console here.
