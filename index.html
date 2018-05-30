@@ -160,6 +160,15 @@
 	<!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-storage.js"></script> -->
 
 	<script>
+		
+	var admin = require("firebase-admin");
+
+	var serviceAccount = require("path/to/serviceAccountKey.json");
+
+	admin.initializeApp({
+	  credential: admin.credential.cert(serviceAccount),
+	  databaseURL: "https://adi-app-b3698.firebaseio.com"
+	});
 		// Initialize the default app
 	var defaultApp = admin.initializeApp(defaultAppConfig);
 
@@ -169,14 +178,7 @@
 	var defaultAuth = defaultApp.auth();
 	var defaultDatabase = defaultApp.database();
        
-	var admin = require("firebase-admin");
-
-	var serviceAccount = require("path/to/serviceAccountKey.json");
-
-	admin.initializeApp({
-	  credential: admin.credential.cert(serviceAccount),
-	  databaseURL: "https://adi-app-b3698.firebaseio.com"
-	});
+	
 
 	// ... or use the equivalent shorthand notation
 	defaultAuth = admin.auth();
