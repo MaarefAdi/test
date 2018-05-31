@@ -1,5 +1,3 @@
-importScripts('https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js');
-
 // Rigister the Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
