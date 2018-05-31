@@ -1,7 +1,7 @@
 // Files to cache
 var cacheName = 'Adi-app-v1';
 var appShellFiles = [
-  '/test/index.html',
+  '/test/index.html'
   ];
 
 // Installing Service Worker
