@@ -25,7 +25,7 @@ messaging.requestPermission().then(function() {
 });
 // Get Instance ID token. Initially this makes a network call, once retrieved
 // subsequent calls to getToken will return from cache.
-/*messaging.getToken().then(function(currentToken) {
+messaging.getToken().then(function(currentToken) {
   if (currentToken) {
     sendTokenToServer(currentToken);
     updateUIForPushEnabled(currentToken);
@@ -40,4 +40,4 @@ messaging.requestPermission().then(function() {
   console.log('An error occurred while retrieving token. ', err);
   showToken('Error retrieving Instance ID token. ', err);
   setTokenSentToServer(false);
-});*/
+});
